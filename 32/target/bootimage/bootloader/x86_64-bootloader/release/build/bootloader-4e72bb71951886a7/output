@@ -1,0 +1,7 @@
+cargo:rerun-if-changed=/Users/ryandoyle/three71os/371os/32/Cargo.toml
+cargo:rustc-link-search=native=/Users/ryandoyle/three71os/371os/32/target/bootimage/bootloader/x86_64-bootloader/release/build/bootloader-4e72bb71951886a7/out
+cargo:rustc-link-lib=static=kernel_bin-osirs
+cargo:rerun-if-env-changed=KERNEL
+cargo:rerun-if-env-changed=KERNEL_MANIFEST
+cargo:rerun-if-changed=/Users/ryandoyle/three71os/371os/32/target/x86_64-osirs/debug/osirs
+cargo:rerun-if-changed=build.rs
