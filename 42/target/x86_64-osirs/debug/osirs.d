@@ -1,0 +1,1 @@
+/Users/ryandoyle/three71os/371os/42/target/x86_64-osirs/debug/osirs: /Users/ryandoyle/three71os/371os/42/src/main.rs /Users/ryandoyle/three71os/371os/42/src/vga.rs
