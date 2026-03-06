@@ -2,10 +2,12 @@
 #![no_std]
 use core::panic::PanicInfo;
 
+mod colors;
 mod vga;
+
 #[unsafe(no_mangle)]
 pub extern "C" fn _start() -> ! {
-    vga::str_to_vga("Hello, world!");
+    colors::image();
     loop {}
 }
 
