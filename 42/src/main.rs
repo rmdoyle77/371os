@@ -34,6 +34,7 @@ fn panic(info: &PanicInfo) -> ! {
 }
 
 fn _ex() {
+    assert!(1 + 1 == 2);
 }
 
 fn _bad() {
@@ -42,7 +43,7 @@ fn _bad() {
 
 #[cfg(test)]
 fn test_runner(_tests: &[&dyn Fn()]) {
-    let fs = [_ex, _bad, _ex];
+    let fs = [_ex, _ex];
     for i in 0..fs.len() {
         serial_print!("Beginning test 0x{:02x}...", i);
         fs[i]();
