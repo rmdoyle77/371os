@@ -75,4 +75,31 @@ pub fn _print(args: core::fmt::Arguments) {
 
 
 
+pub fn clear() {
+    unsafe {
+        LATEST = 0;
+        for i in 0..MAX {
+            let dst: *mut u8 = ((MMIO as usize) + (i * 2)) as *mut u8;
+            *dst = 32;
+            *((dst as usize + 1) as *mut u8) = COLOR;
+        }
+    }
+}
+pub fn write_at(pos: usize, s: &str) {
+    let v = s.as_bytes();
+    unsafe {
+        for i in 0..v.len() {
+            let dst: *mut u8 = ((MMIO as usize) + ((pos + i) * 2)) as *mut u8;
+            *dst = v[i];
+            *((dst as usize + 1) as *mut u8) = COLOR;
+        }
+    }
+}
 
+pub fn get_latest() -> usize {
+    unsafe { LATEST }
+}
+
+pub fn set_latest(pos: usize) {
+    unsafe { LATEST = pos; }
+}
