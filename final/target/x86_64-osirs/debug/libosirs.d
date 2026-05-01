@@ -1,0 +1,1 @@
+/Users/ryandoyle/three71os/371os/final/target/x86_64-osirs/debug/libosirs.rlib: /Users/ryandoyle/three71os/371os/final/src/interrupts.rs /Users/ryandoyle/three71os/371os/final/src/lib.rs /Users/ryandoyle/three71os/371os/final/src/memory.rs /Users/ryandoyle/three71os/371os/final/src/snake.rs /Users/ryandoyle/three71os/371os/final/src/vga.rs
